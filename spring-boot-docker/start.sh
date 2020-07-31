@@ -17,5 +17,5 @@ then
     /usr/bin/docker stop "$word"
     /usr/bin/docker rm "$word"
 fi
-/usr/apache-maven/apache-maven-3.6.3/mvn clean package -P spring-boot docker:build
+/usr/apache-maven/apache-maven-3.6.3/bin/mvn clean package -P spring-boot docker:build
 /usr/bin/docker run -p 8070:8070 -d --name "$appName" "$appName":latest
